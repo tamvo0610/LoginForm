@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./assets/css/tailwind.css">
+     <link rel="stylesheet" href="./assets/css/main.css">
+     
+   </head>
+<body id="login-page" class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-4">
+  
+  <div class="flex h-screen items-center justify-center flex-col">
+   <div class="card"> 
+    <div class="title">
+      <p>Registration</p>
+    </div>
+    <div class="content">
+      <form action="#" id="register-form" class="register-box">
+        <div class="user-details flex flex-wrap gap-x-8 mt-6 mb-6">
+          <div class="input-box mb-6">
+            <div class="details">Full Name</div>
+            <input type="text" name="fullname" class="fullname" placeholder="Enter your name" required>
+            <span class="error-mess"></span>
+          </div>
+          <div class="input-box mb-6">
+            <div class="details">Username</div>
+            <input type="text" name="username" class="username" placeholder="Enter your username" required>
+            <span class="error-mess"></span>
+          </div>
+          <div class="input-box mb-6">
+            <div class="details">Email</div>
+            <input type="email" name="email" class="email" placeholder="Enter your email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <span class="error-mess"></span>
+          </div>
+          <div class="input-box mb-6">
+            <div class="details">Phone Number</div>
+            <input type="text" name="phone" class="phone" placeholder="Enter your number" required>
+            <span class="error-mess"></span>
+          </div>
+          <div class="input-box mb-6">
+            <div class="details">Password</div>
+            <input type="password" name="password" class="pass" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}" minlength="6" maxlength="15" required>
+            <span class="error-mess"></span>
+          </div>
+          <div class="input-box mb-6">
+            <div class="details">Confirm Password</div>
+            <input type="password" name="password" class="confirm-pass" placeholder="Confirm your password" pattern="Conmemay123." required>
+            <span class="error-mess"></span>
+          </div>
+        </div>
+        <div class="button">
+            <button value="">Register</button>
+        </div>
+      </form> 
+    </div>
+    </div>
+  </div>
+  <div class="flex h-screen items-center justify-center flex-col">
+    <div class="card">
+    <div class="title">
+      <p>Login</p>
+    </div>
+    <div class="content">
+      <form action="#" id="signin-form" class="signin-box">
+        <div class="user-details flex flex-wrap gap-x-8 mt-6 mb-6">
+          <div class="input-box mb-6">
+            <div class="details">Username</div>
+            <input type="text" name="username" class="username" placeholder="Enter your username" required>
+            <span class="error-mess"></span>
+          </div>
+          <div class="input-box mb-6">
+            <div class="details">Password</div>
+            <input type="password" name="password" class="pass" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}" minlength="6" maxlength="15" required>
+            <span class="error-mess"></span>
+        </div>
+        </div>
+        <div class="button">
+            <button value="">Login</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+  <div id="toast" class="toast absolute top-6 right-6 hidden"></div>
+
+</body>
+<script src="./assets/js/main.js"></script>
+<script>
+</script>
+</html>

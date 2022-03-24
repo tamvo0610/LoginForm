@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+div{
+  display: block;
+}
+.card{
+  max-width: 600px;
+  width: 100%;
+  background-color: rgb(233, 236, 239);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.card p{
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 0.25rem;
+  position: relative;
+}
+.card p::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.25rem;
+  width: 3rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+form .user-details .input-box{
+  position: relative;
+  width: calc(100% / 2 - 1rem);
+}
+form .input-box div{
+  font-weight: 500;
+  padding-left: 0.125rem;
+  margin-bottom: 0.25rem;
+}
+form .input-box input{
+  height: 2.875rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  padding-left: 0.75rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 0.125rem;
+  transition: all 0.3s ease;
+}
+form .input-box input:focus,
+form .input-box input:valid{
+  border-color: #1bd339;
+}
+form .button button{
+  height: 2.875rem;
+  width: 100%;
+  border-radius: 0.25rem;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 0.375rem;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+form .button button:hover{
+  /* opacity: 0.8; */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+#signin-form .input-box{
+  width: 100%;
+}
+/* ===== INVALID ===== */
+form .input-box .error-mess{
+  position: absolute;
+  left: 0.25rem;
+  bottom: -1.5rem;
+}
+form .input-box.invalid .error-mess{
+  color: red;
+}
+form .input-box.invalid input{
+  border-color: red;
+  /* background-color: #a56161; */
+}
+/* ========== RESPONSIVE ========== */
+@media(max-width: 584px){
+  form .user-details .input-box{
+    width: 100%;
+  }
+  form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  form .user-details::-webkit-scrollbar{
+    width: unset;
+  }
+}
+/* ========== TOAST MESSAGE ========== */
+.toast{
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  overflow: hidden;
+  transition: all linear 0.3s;
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes progress {
+  100%{
+    right: 100%;
+  }
+}
+.toast.valid{
+  border-left: 0.375rem solid green;
+}
+.toast.invalid{
+  border-left: 0.375rem solid red;
+}
+.toast-content .check{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: white;
+}
+.check.valid{
+  background-color: green;
+}
+.check.invalid{
+  background-color: red;
+}
+.toast .progress{
+  background-color: #ddd;
+}
+.toast .progress::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  height: 100%;
+  width: 100%;
+  animation: progress 3s linear forwards;
+}
+.toast.valid .progress::before{
+  background-color: green;
+}
+.toast.invalid .progress::before{
+  background-color: red;
+}

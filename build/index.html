@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <!---<title> Responsive Registration Form | CodingLab </title>--->
-    
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./assets/css/tailwind.css">
-     <link rel="stylesheet" href="./assets/css/main.css">
-     
-   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <!-- TAILWIND CSS -->
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+     <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
 <body id="login-page" class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-1 gap-4">
-  
   <div class="flex h-screen items-center justify-center flex-col">
-   <div class="card"> 
+    <div class="card"> 
     <div class="title">
       <p>Registration</p>
     </div>
@@ -75,7 +76,7 @@
             <div class="details">Password</div>
             <input type="password" name="password" class="pass" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,15}" minlength="6" maxlength="15" required>
             <span class="error-mess"></span>
-        </div>
+          </div>
         </div>
         <div class="button">
             <button value="">Login</button>
@@ -85,9 +86,6 @@
     </div>
   </div>
   <div id="toast" class="toast absolute top-6 right-6 hidden"></div>
-
 </body>
 <script src="./assets/js/main.js"></script>
-<script>
-</script>
 </html>

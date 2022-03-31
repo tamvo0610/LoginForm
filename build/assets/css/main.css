@@ -114,6 +114,9 @@ form .input-box.invalid input{
   padding: 0.75rem 1rem;
   overflow: hidden;
   transition: all linear 0.3s;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
 }
 @keyframes slideInLeft {
   from {
